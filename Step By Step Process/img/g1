@@ -1,0 +1,50 @@
+digraph {
+	m1 [label="Machine Learning" shape=box]
+	m2 [label="Collecting Data" shape=box]
+	m3 [label="Preparing the Data" shape=box]
+	m4 [label="Choosing a Model" shape=box]
+	m5 [label="Training the Model" shape=box]
+	m6 [label="Evaluating the Model" shape=box]
+	m7 [label="Parameter Tuning" shape=box]
+	m8 [label="Making Predictions" shape=box]
+	m1 -> m2
+	m4 -> m5
+	m5 -> m6
+	m6 -> m7
+	m7 -> m8
+	m11 [label="Open Source Datasets" shape=box]
+	m12 [label="Web Scraping" shape=box]
+	m13 [label="Synthetic Datasets" shape=box]
+	m14 [label="Manual Data Generation" shape=box]
+	m2 -> m11
+	m2 -> m12
+	m2 -> m13
+	m2 -> m14
+	m11 -> m3
+	m12 -> m3
+	m13 -> m3
+	m14 -> m3
+	m21 [label="Handling missing Data" shape=box]
+	m22 [label="Creating Categories" shape=box]
+	m23 [label="Creating New Features" shape=box]
+	m24 [label="Converting Features into Numeric" shape=box]
+	m25 [label="Detecting Outliers" shape=box]
+	m26 [label="Plot different features against one another" shape=box]
+	m3 -> m21
+	m3 -> m22
+	m3 -> m23
+	m3 -> m24
+	m3 -> m25
+	m3 -> m26
+	m22 -> m4
+	m23 -> m4
+	m24 -> m4
+	m25 -> m4
+	m26 -> m4
+	m21 -> m211
+	m21 -> m212
+	m211 -> m4
+	m212 -> m4
+	m211 [label=Deletion shape=box]
+	m212 [label=Imputation shape=box]
+}
