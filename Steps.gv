@@ -1,7 +1,7 @@
 digraph {
 	m1 [label="Machine Learning" shape=box]
 	m2 [label="Collecting Data" shape=box]
-	m3 [label="Preparing the Data" shape=box]
+	m3 [label="Data Preprocessing" shape=box]
 	m4 [label="Choosing a Model" shape=box]
 	m5 [label="Training the Model" shape=box]
 	m6 [label="Evaluating the Model" shape=box]
@@ -24,27 +24,86 @@ digraph {
 	m12 -> m3
 	m13 -> m3
 	m14 -> m3
-	m21 [label="Handling missing Data" shape=box]
-	m22 [label="Creating Categories" shape=box]
-	m23 [label="Creating New Features" shape=box]
-	m24 [label="Converting Features into Numeric" shape=box]
-	m25 [label="Detecting Outliers" shape=box]
-	m26 [label="Plot different features against one another" shape=box]
+	m21 [label="Data Cleaning" shape=box]
+	m22 [label="Data Integration" shape=box]
+	m23 [label="Data Transformation" shape=box]
+	m24 [label="Data Reduction" shape=box]
+	m25 [label="Other Methods" shape=box]
 	m3 -> m21
 	m3 -> m22
 	m3 -> m23
 	m3 -> m24
 	m3 -> m25
-	m3 -> m26
+	m22 -> m23
+	m23 -> m24
+	m24 -> m25
+	m21 -> m4
 	m22 -> m4
 	m23 -> m4
 	m24 -> m4
 	m25 -> m4
-	m26 -> m4
+	m211 [label="Missing Values" shape=box]
+	m212 [label="Smothening
+of
+Noisy Data" shape=box]
+	m213 [label="Removing Outliers" shape=box]
 	m21 -> m211
 	m21 -> m212
-	m211 -> m4
-	m212 -> m4
-	m211 [label=Deletion shape=box]
-	m212 [label=Imputation shape=box]
+	m21 -> m213
+	m212 -> m22
+	m213 -> m22
+	m2111 [label=Deletion shape=box]
+	m2112 [label=Imputation shape=box]
+	m211 -> m2111
+	m211 -> m2112
+	m2111 -> m22
+	m2112 -> m22
+	m2121 [label=Binning shape=box]
+	m2122 [label=Regression shape=box]
+	m2123 [label=Clustering shape=box]
+	m2124 [label="Outliers Analysis" shape=box]
+	m212 -> m2121
+	m212 -> m2122
+	m212 -> m2123
+	m212 -> m2124
+	m2121 -> m22
+	m2122 -> m22
+	m2123 -> m22
+	m2124 -> m22
+	m231 [label=Standardization shape=box]
+	m232 [label=Generalization shape=box]
+	m233 [label=Normalization shape=box]
+	m234 [label="Attribute
+Selection" shape=box]
+	m235 [label=Aggregation shape=box]
+	m236 [label="Rescaling
+Data" shape=box]
+	m237 [label="Binarize
+Data" shape=box]
+	m23 -> m231
+	m23 -> m232
+	m23 -> m233
+	m23 -> m234
+	m23 -> m235
+	m23 -> m236
+	m23 -> m237
+	m231 -> m24
+	m232 -> m24
+	m234 -> m24
+	m235 -> m24
+	m236 -> m24
+	m237 -> m24
+	m2331 [label="Min-Max
+Normalization" shape=box]
+	m2332 [label="Z-Score
+Normalization" shape=box]
+	m2333 [label="Decimal
+Scaling
+Normalization" shape=box]
+	m233 -> m2331
+	m233 -> m2332
+	m233 -> m2333
+	m2331 -> m24
+	m2332 -> m24
+	m2333 -> m24
 }
