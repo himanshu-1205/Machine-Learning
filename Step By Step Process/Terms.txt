@@ -1,0 +1,3 @@
+Covariance
+Correlation
+Bias Vairance Tradeoff
