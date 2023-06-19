@@ -1,3 +1,4 @@
 Covariance
 Correlation
 Bias Vairance Tradeoff
+LDA for classification Algo.
